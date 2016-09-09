@@ -5,7 +5,8 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fernandagallina.feyespy.MainActivity">
+    tools:context="fernandagallina.clarifaiTest.MainActivity"
+    android:background="@android:color/white">
 
     <TextureView
         android:id="@+id/texture"
@@ -17,11 +18,17 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
         android:id="@+id/button"
         android:text="@string/take_picture"
         android:textSize="10sp"
         tools:ignore="SmallSp"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/textView"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

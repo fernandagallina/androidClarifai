@@ -1,4 +1,4 @@
-package fernandagallina.feyespy;
+package fernandagallina.clarifaiTest;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package fernandagallina.feyespy;
+package fernandagallina.clarifaiTest;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
