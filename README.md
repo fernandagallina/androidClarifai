@@ -1,2 +1,2 @@
-# androidEyeSpy
-A project to test EyeSpy API
+# androidClarifai
+  A project to test Clarifai API and Camera2 
