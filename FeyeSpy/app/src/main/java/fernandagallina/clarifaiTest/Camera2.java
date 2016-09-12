@@ -185,7 +185,6 @@ public class Camera2 {
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
-
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)

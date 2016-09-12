@@ -1,6 +1,5 @@
 package fernandagallina.clarifaiTest;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -30,7 +29,6 @@ public class Clarifai {
     public void recognizePicture() {
         Bitmap bitmap = cameraFragment.textureView.getBitmap();
         if (bitmap != null) {
-//            imageView.setImageBitmap(bitmap);
             cameraFragment.textView.setText("Recognizing...");
             cameraFragment.takePictureButton.setEnabled(false);
 
@@ -47,30 +45,6 @@ public class Clarifai {
             cameraFragment.textView.setText("Unable to load selected image.");
         }
     }
-
-
-//    /** Loads a Bitmap from a content URI returned by the media picker. */
-//    private Bitmap loadBitmapFromUri(Uri uri) {
-//        try {
-//            // The image may be large. Load an image that is sized for display. This follows best
-//            // practices from http://developer.android.com/training/displaying-bitmaps/load-bitmap.html
-//            BitmapFactory.Options opts = new BitmapFactory.Options();
-//            opts.inJustDecodeBounds = true;
-//            BitmapFactory.decodeStream(getContentResolver().openInputStream(uri), null, opts);
-//            int sampleSize = 1;
-//            while (opts.outWidth / (2 * sampleSize) >= cameraFragment.textureView.getWidth() &&
-//                    opts.outHeight / (2 * sampleSize) >= cameraFragment.textureView.getHeight()) {
-//                sampleSize *= 2;
-//            }
-//
-//            opts = new BitmapFactory.Options();
-//            opts.inSampleSize = sampleSize;
-//            return BitmapFactory.decodeStream(getContentResolver().openInputStream(uri), null, opts);
-//        } catch (IOException e) {
-//            Log.e(TAG, "Error loading image: " + uri, e);
-//        }
-//        return null;
-//    }
 
     /** Sends the given bitmap to Clarifai for recognition and returns the result. */
     private RecognitionResult recognizeBitmap(Bitmap bitmap) {
